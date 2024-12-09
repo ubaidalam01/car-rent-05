@@ -33,7 +33,7 @@ const Header = () => {
 
       {/* Right-aligned profile pic for Mobile */}
       <div className="sm:hidden w-[50px] h-[50px] rounded-full overflow-hidden ml-auto -mt-3 sm:mt-0 absolute top-4 right-4">
-        <Image src="prof.svg" alt="profile" width={50} height={50} />
+        <Image src="/prof.svg" alt="profile" width={50} height={50} />
       </div>
 
       {/* Right-aligned icons for larger screens */}
