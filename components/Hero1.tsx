@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const Hero1 = () => {
   return (
-    <div className="w-full flex flex-col md:flex-row items-center justify-center mt-10 overflow-hidden p-4">
+    <div className="bg-white w-full flex flex-col md:flex-row items-center justify-center mt-10 overflow-hidden p-4">
       {/* Left side Pick-Up section */}
       <div className="p-4 rounded-lg w-full md:w-[582px] h-[136px] shadow-md">
         <div className="flex items-center">
