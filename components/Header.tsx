@@ -1,54 +1,50 @@
-import React from 'react'
+import React from 'react';
 import { FiSearch } from "react-icons/fi";
-  
+import Image from 'next/image';
 
 const Header = () => {
   return (
-<div className='w-full flex items-center gap-10 px-4 h-[124px] border-b bg-[#FFFFFF]'>
-  <h1 className='font-bold text-[40px] ml-6 text-[#3563E9]'>MORENT</h1>
+    <div className="flex items-center sm:gap-10 px-4 h-[124px] border-b bg-[#FFFFFF] sm:flex-row flex-col">
 
-  <div className='flex items-center w-full sm:w-auto'>
-    {/* Search Bar with Adjustment Icon */}
-    <div className="flex items-center border rounded-full p-2 w-[492px] justify-between sm:w-[492px] sm:mr-0 mr-2">
-      {/* Left SVG Icon */}
-      <div className="text-gray-500 text-[24px] ml-2">
-        <FiSearch />
+      {/* Logo */}
+      <h1 className="font-bold text-[30px] sm:text-[40px] text-[#3563E9] sm:mb-0 mb-4">MORENT</h1>
+
+      {/* Search Bar */}
+      <div className="flex items-center sm:w-auto w-full sm:justify-between">
+        <div className="flex items-center border rounded-full p-2 sm:w-[492px] w-full justify-between">
+          {/* Search Icon */}
+          <div className="text-gray-500 text-[24px] ml-2">
+            <FiSearch />
+          </div>
+
+          {/* Input Field */}
+          <input
+            type="text"
+            placeholder="Search something here"
+            className="w-full outline-none bg-transparent placeholder:text-[16px] mx-2"
+          />
+
+          {/* Adjustment Icon */}
+          <div className="text-gray-500 text-xl mr-2">
+            <Image src="/adjst.svg" alt="Adjustment" width={24} height={24} />
+          </div>
+        </div>
       </div>
 
-      {/* Input Field */}
-      <input
-        type="text"
-        placeholder="Search something here"
-        className="w-full outline-none bg-transparent placeholder:text-[16px] mx-2"
-      />
+      {/* Right-aligned profile pic for Mobile */}
+      <div className="sm:hidden w-[50px] h-[50px] rounded-full overflow-hidden ml-auto -mt-3 sm:mt-0 absolute top-4 right-4">
+        <Image src="prof.svg" alt="profile" width={50} height={50} />
+      </div>
 
-      {/* Right Search Icon */}
-      <div className="text-gray-500 text-xl mr-2">
-        <img src="/adjst.svg" alt="Adjustment" />
+      {/* Right-aligned icons for larger screens */}
+      <div className="hidden sm:flex w-[240px] h-[44px] justify-between ml-auto">
+        <Image src="like.svg" alt="like" width={44} height={44} />
+        <Image src="Notify.svg" alt="notification" width={44} height={44} />
+        <Image src="sett.svg" alt="settings" width={44} height={44} />
+        <Image src="prof.svg" alt="profile" width={44} height={44} />
       </div>
     </div>
-  </div>
+  );
+};
 
-  {/* Right-aligned icons for larger screens */}
-  <div className='w-[236px] h-[44px] flex justify-between mr-2 ml-auto'>
-   <div className='sm:flex hidden'>
-   <img src="like.svg" alt="like" />
-    <img src="Notify.svg" alt="notification" />
-    <img src="sett.svg" alt="settings" />
-    <img src="prof.svg" alt="profile" />
-   </div>
-  </div>
-
-  {/* Responsive Profile and Search Section for small screens */}
-  <div className='w-full flex flex-col items-center justify-between sm:hidden mt-4'>
-    {/* Profile Pic */}
-    <div className="w-[50px] h-[50px] rounded-full overflow-hidden mt-0 mb-4">
-      <img src="prof.svg" alt="profile" className="w-full h-full object-cover" />
-    </div>
-
-  </div>
-</div>
-  )
-}
-
-export default Header
+export default Header;

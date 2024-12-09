@@ -1,47 +1,60 @@
-import React from 'react'
+import React from 'react';
 
-const Footer = () => {
+function Footer() {
   return (
-    <footer className='flex flex-col items-center justify-center'>
-      <div className='w-full flex items-center justify-between p-10'>
-        <div className='mb-28'>
-          <h1 className='font-bold text-[40px] text-[#3563E9]'>MORENT</h1>
-          <p>Our vision is to provide convenience<br /> and help increase your sales business.</p>
+    <footer className="bg-gray-100 py-8">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="mb-6 md:mb-0">
+            <h1 className="text-2xl text-[#3563E9] font-bold mb-4">MORENT</h1>
+            <p className='text-[#131313]'>Our vision is to provide convenience<br/> and help increase your sales business.</p>
+          </div>
+
+          <div className="flex flex-col md:flex-row space-x-8">
+            <div>
+              <h3 className="text-lg font-semibold mb-4">About</h3>
+              <ul className='space-y-3'>
+                <li><a href="#" className="hover:underline">How it works</a></li>
+                <li><a href="#" className="hover:underline">Featured</a></li>
+                <li><a href="#" className="hover:underline">Partnership</a></li>
+                <li><a href="#" className="hover:underline">Business Relation</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Community</h3>
+              <ul className='space-y-3'>
+                <li><a href="#" className="hover:underline">Events</a></li>
+                <li><a href="#" className="hover:underline">Blog</a></li>
+                <li><a href="#" className="hover:underline">Podcast</a></li>
+                <li><a href="#" className="hover:underline">Invite a friend</a></li>
+              </ul>
+            </div>
+
+            <div className=''>
+              <h3 className="text-lg font-semibold mb-4">Socials</h3>
+              <ul className='space-y-3'>
+                <li><a href="#" className="hover:underline">Discord</a></li>
+                <li><a href="#" className="hover:underline">Instagram</a></li>
+                <li><a href="#" className="hover:underline">Twitter</a></li>
+                <li><a href="#" className="hover:underline">Facebook</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div className='flex justify-between w-[35%] h-[40%] bg-slat-600'>
-          <div className='flex flex-col gap-8'>
-            <h1 className='text-[32px]'>About</h1>
-            <h1 className='text-[#1A202C]'>How it works</h1>
-            <h1 className='text-[#1A202C]'>Featured</h1>
-            <h1 className='text-[#1A202C]'>Partnership</h1>
-            <h1 className='text-[#1A202C]'>Business Relation</h1>
-          </div>
-          <div className='flex flex-col gap-8'>
-            <h1 className='text-[32px]'>Community</h1>
-            <h1 className='text-[#131313]'>Events</h1>
-            <h1 className='text-[#1A202C]'>Blog</h1>
-            <h1 className='text-[#1A202C]'>Podcast</h1>
-            <h1 className='text-[#1A202C]'>Invite a friend</h1>
-          </div>
-          <div className='flex flex-col gap-8'>
-            <h1 className='text-[32px]'>Socials</h1>
-            <h1 className='text-[#1A202C]'>Discord</h1>
-            <h1 className='text-[#1A202C]'>Instagram</h1>
-            <h1 className='text-[#1A202C]'>Twitter</h1>
-            <h1 className='text-[#1A202C]'>Facebook</h1>
+
+        <div className="mt-8 border-t border-gray-200 pt-4">
+          <div className="flex justify-between mt-4">
+          <p className="text-sm text-black">© 2022 MORENT. All rights reserved.</p>
+           <div>
+           <a href="#" className="text-sm text-black hover:underline mr-4">Privacy & Policy</a>
+           <a href="#" className="text-sm text-black hover:underline">Terms & Condition</a>
+           </div>
           </div>
         </div>
       </div>
-      <div className='flex justify-between items-center w-full border-t-2 bg-lie-700 p-10'>
-  <h1 className='text-center text-[16px] text-[#1A202C]'>©2022 MORENT. All rights reserved</h1>
-  <div className='flex gap-4'>
-    <h1 className='text-[16px] font-medium'>Privacy & Policy</h1>
-    <h1 className='text-[16px] font-medium'>Terms & Condition</h1>
-  </div>
-</div>
-
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

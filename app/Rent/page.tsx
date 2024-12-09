@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-const CarDetailsPage = () => {
+const CarRent = () => {
   return (
     <div className="min-h-screen flex flex-col lg:flex-row">
       {/* Sidebar */}
@@ -62,121 +62,76 @@ const CarDetailsPage = () => {
 
       {/* Main Content */}
       <main className="flex-1 p-6 ">
-      <div className="min-h-screen flex flex-col lg:flex-row items-center justify-around shadow-lg rounded-xl overflow-hidden">
-  {/* Left Section */}
-  <div className="lg:w-1/2 p-6 bg-[#E0E9F4]">
-    <img
-      src="cart.svg"
-      alt="Car"
-      className="w-full rounded-lg object-cover"
-    />
-    <div className="flex flex-row   gap-2 mt-4 justify-center">
-      <img
-        src="cart1.svg"
-        alt="Thumbnail 1"
-        className="h-[100px] w-[120px] md:h-[124px] md:w-[148px] rounded-lg border border-gray-300"
-      />
-      <img
-        src="cart2.svg"
-        alt="Thumbnail 2"
-        className="h-[100px] w-[120px] md:h-[124px] md:w-[148px] rounded-lg border border-gray-300"
-      />
-      <img
-        src="cart3.svg"
-        alt="Thumbnail 3"
-        className="h-[100px] w-[120px] md:h-[124px] md:w-[148px] rounded-lg border border-gray-300"
-      />
-    </div>
-  </div>
+      <div className="w-full flex flex-col md:flex-row items-center justify-center mt-10 overflow-hidden p-4">
+      {/* Left side Pick-Up section */}
+      <div className="p-4 rounded-lg w-full md:w-[486px] h-[132px] shadow-md">
+        <div className="flex items-center">
+          <span className="mr-1">
+            {/* <Image src="/mark.svg" alt="Mark Icon" width={24} height={24} /> */}
+            <img src="mark.svg" alt="" />
+          </span>
+          <p className="text-[20px] font-medium">Pick-Up</p>
+        </div>
+        <div className="grid grid-cols-3 gap-4 mt-4">
+          <div>
+            <label className="block text-[20px] font-bold">Locations</label>
+            <select className="mt-1 block w-full pl-3 pr-10 py-2 text-base text-[#90A3BF] bg-transparent focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+              <option>Select your city</option>
+            </select>
+          </div>
+          <div>
+            <label className="block text-[20px] font-bold">Date</label>
+            <select className="mt-1 block w-full pl-3 pr-10 py-2 text-base text-[#90A3BF] bg-transparent focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+              <option>Select your date</option>
+            </select>
+          </div>
+          <div>
+            <label className="block text-[20px] font-bold">Time</label>
+            <select className="mt-1 block w-full pl-3 pr-10 py-2 text-base text-[#90A3BF] bg-transparent focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+              <option>Select your time</option>
+            </select>
+          </div>
+        </div>
+      </div>
 
-  {/* Right Section */}
-  <div className="lg:w-[492px] w-full p-4 bg-white lg:shadow-lg">
-    <h3 className="flex justify-between text-[28px] md:text-[40px] font-bold text-center lg:text-left">
-      Nissan GT - R <img src="heart.svg" alt="" />
-    </h3>
-    <p className="text-gray-500 text-sm text-center lg:text-left">
-      ⭐⭐⭐⭐⭐ (420+ Reviews)
-    </p>
-    <p className="text-base md:text-xl text-gray-600 mt-2 text-center lg:text-left">
-      NISMO has become the embodiment of Nissan's <br />
-      outstanding performance, inspired by the most <br />
-      unforgiving proving ground, the "race track."
-    </p>
-    <div className="flex flex-col md:flex-row mt-4 gap-6">
-      <div className="flex flex-col gap-4 md:gap-8">
-        <p className="text-sm md:text-[16px] text-gray-600">
-          <strong>Type Car:</strong> Sport
-        </p>
-        <p className="text-sm md:text-[16px] text-gray-600">
-          <strong>Steering:</strong> Manual
-        </p>
+      {/* Middle arrows section */}
+      <div className="flex justify-center items-center">
+        {/* <Image src="/switch.svg" alt="Switch Icon" width={100} height={60} /> */}
+        <img src="/switch.svg" alt="" />
       </div>
-      <div className="flex flex-col gap-4 md:gap-8">
-        <p className="text-sm md:text-[16px] text-gray-600">
-          <strong>Capacity:</strong> 2 Person
-        </p>
-        <p className="text-sm md:text-[16px] text-gray-600">
-          <strong>Gasoline:</strong> 70L
-        </p>
-      </div>
-    </div>
-    <div className="mt-6 flex flex-col md:flex-row items-center justify-between gap-4">
-      <div>
-        <p className="text-base md:text-lg font-bold text-black">
-          $80.00/
-          <span className="text-[#90A3BF] text-sm">days</span>
-        </p>
-        <p className="text-xs md:text-sm text-[#90A3BF] line-through">
-          $100.00
-        </p>
-      </div>
-      <button className="bg-blue-600 text-white px-6 py-2 rounded-md">
-        <Link href="/Payment">Rent Now</Link>
-      </button>
-    </div>
-  </div>
-</div>
 
-        <section className="bg-gray-100 p-4">
-  <h2 className="text-2xl font-bold mb-6">Reviews <span className="text-gray-500">(13)</span></h2>
-
-  <div className="review mb-8">
-    <div className="review-header flex items-center mb-4">
-      <img src="/prof1.svg" alt="Alex Stanton" className="w-16 h-16 rounded-full mr-4" />
-      <div>
-        <h3 className="text-lg font-bold">Alex Stanton</h3>
-        <p className="text-gray-500">CEO at Bukalapak</p>
-        <p className="text-gray-500">21 July 2022</p>
-      </div>
-      <div className="rating ml-4">
-       <span>⭐⭐⭐⭐⭐</span>
+      {/* Right side Pick-Up section */}
+      <div className="p-4 rounded-lg w-full md:w-[486px] h-[132px] shadow-md">
+        <div className="flex items-center">
+          <span className="mr-1">
+            <img src="/mark.svg" alt="" />
+          </span>
+          <p className="text-[20px] font-medium">Drop-Off</p>
+        </div>
+        <div className="grid grid-cols-3 gap-4 mt-4">
+          <div>
+            <label className="block text-[20px] font-bold">Locations</label>
+            <select className="mt-1 block w-full pl-3 pr-10 py-2 text-base text-[#90A3BF] bg-transparent focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+              <option>Select your city</option>
+            </select>
+          </div>
+          <div>
+            <label className="block text-[20px] font-bold">Date</label>
+            <select className="mt-1 block w-full pl-3 pr-10 py-2 text-base text-[#90A3BF] bg-transparent focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+              <option>Select your date</option>
+            </select>
+          </div>
+          <div>
+            <label className="block text-[20px] font-bold">Time</label>
+            <select className="mt-1 block w-full pl-3 pr-10 py-2 text-base text-[#90A3BF] bg-transparent focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+              <option>Select your time</option>
+            </select>
+          </div>
+        </div>
       </div>
     </div>
-    <p className="text-gray-700">We are very happy with the service from the MORENT App. Morent has a low price and also a large variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.</p>
-  </div>
-
-  <div className="review mb-8">
-    <div className="review-header flex items-center mb-4">
-      <img src="/prof2.svg" alt="Skylar Dias" className="w-16 h-16 rounded-full mr-4" />
-      <div>
-        <h3 className="text-lg font-bold">Skylar Dias</h3>
-        <p className="text-gray-500">CEO at Amazon</p>
-        <p className="text-gray-500">20 July 2022</p>
-      </div>
-      <div className="rating ml-4">
-      <span>⭐⭐⭐⭐⭐</span>
-      </div>
-    </div>
-    <p className="text-gray-700">We are greatly helped by the services of the MORENT Application. Morent has low prices and also a wide variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.</p>
-  </div>
-
-  <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Show All</button>
-</section>
         
 <div className='min-h-screen bg-[#FFFFFF]'> 
-  {/* Heading */}
-  <h1 className='text-[#90A3BF] text-3xl font-bold text-start p-2'>Recent Car</h1>
-  <h1 className='text-[#3563E9] text-end font-bold p-6'>View all</h1>
   {/* Car Section for Desktop */}
   <div className='flex items-center justify-evenly md:flex-row flex-col space-y-4 md:space-y-0'>
     {/* Car Card 1 */}
@@ -256,9 +211,6 @@ const CarDetailsPage = () => {
   </div>
 </div>
 <div className='min-h-screen bg-[#FFFFFF]'> 
-  {/* Heading */}
-  <h1 className='text-[#90A3BF] text-3xl font-bold text-start p-2'>Recomendation Car</h1>
-  <h1 className='text-[#3563E9] text-end font-bold p-6'>View all</h1>
   {/* Car Section for Desktop */}
   <div className='flex items-center justify-evenly md:flex-row flex-col space-y-4 md:space-y-0'>
     {/* Car Card 1 */}
@@ -336,10 +288,17 @@ const CarDetailsPage = () => {
       </div>
     </div>
   </div>
+  <div className="flex items-center justify-center mt-5">
+  <Link href="/Payment">
+  <button className="bg-blue-600 text-white w-[116px] h-[44px] rounded-md hover:bg-blue-700 transition">
+   Rent now
+</button>
+</Link>
+  </div>
 </div>
       </main>
     </div>
   );
 };
 
-export default CarDetailsPage;
+export default CarRent;
